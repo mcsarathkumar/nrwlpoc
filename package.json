@@ -28,7 +28,8 @@
   },
   "private": true,
   "dependencies": {
-    "@nrwl/angular": "^9.2.4"
+    "@nrwl/angular": "^9.2.4",
+    "@nrwl/express": "^9.2.4"
   },
   "devDependencies": {
     "@angular/cli": "9.1.0",
