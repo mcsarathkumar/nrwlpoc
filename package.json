@@ -29,8 +29,6 @@
   },
   "private": true,
   "dependencies": {
-    "@nrwl/angular": "^9.2.4",
-    "express": "4.17.1",
     "@angular/animations": "^9.1.0",
     "@angular/common": "^9.1.0",
     "@angular/compiler": "^9.1.0",
@@ -39,9 +37,15 @@
     "@angular/platform-browser": "^9.1.0",
     "@angular/platform-browser-dynamic": "^9.1.0",
     "@angular/router": "^9.1.0",
+    "@nrwl/angular": "^9.2.4",
     "core-js": "^2.5.4",
+    "express": "4.17.1",
     "rxjs": "~6.5.4",
-    "zone.js": "^0.10.2"
+    "zone.js": "^0.10.2",
+    "@nestjs/common": "^6.8.3",
+    "@nestjs/core": "^6.8.3",
+    "@nestjs/platform-express": "^6.8.3",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@angular/cli": "9.1.0",
@@ -77,6 +81,9 @@
     "jasmine-spec-reporter": "~4.2.1",
     "@types/jasmine": "~2.8.8",
     "protractor": "~5.4.0",
-    "@types/jasminewd2": "~2.0.3"
+    "@types/jasminewd2": "~2.0.3",
+    "@nestjs/schematics": "^6.7.0",
+    "@nestjs/testing": "^6.8.3",
+    "@nrwl/nest": "9.2.4"
   }
 }

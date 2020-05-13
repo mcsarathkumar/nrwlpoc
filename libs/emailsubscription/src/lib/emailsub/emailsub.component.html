@@ -1,1 +1,6 @@
-<p>emailsub works!</p>
+<input type="email" name="emailsub" [(ngModel)]="emailVal">
+<input type="button" value="Save" (click)="save()">
+
+<p *ngIf="response">
+  {{response.message}}
+</p>

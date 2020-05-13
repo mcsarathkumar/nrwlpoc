@@ -23,20 +23,28 @@
       "tags": []
     },
     "review": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["shared-assets"]
     },
     "review-e2e": {
       "tags": [],
       "implicitDependencies": ["review"]
     },
     "blog": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["shared-assets"]
     },
     "blog-e2e": {
       "tags": [],
       "implicitDependencies": ["blog"]
     },
     "emailsubscription": {
+      "tags": []
+    },
+    "app-helpers": {
+      "tags": []
+    },
+    "shared-assets": {
       "tags": []
     }
   }

@@ -74,7 +74,11 @@
             "polyfills": "apps/review/src/polyfills.ts",
             "tsConfig": "apps/review/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/review/src/favicon.ico", "apps/review/src/assets"],
+            "assets": ["apps/review/src/favicon.ico", "apps/review/src/assets", {
+              "input": "libs/shared/assets/src/lib",
+              "glob": "*.jpg",
+              "output": "assets"
+            }],
             "styles": ["apps/review/src/styles.css"],
             "scripts": []
           },
@@ -193,7 +197,11 @@
             "polyfills": "apps/blog/src/polyfills.ts",
             "tsConfig": "apps/blog/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets"],
+            "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets", {
+              "input": "libs/shared/assets/src/lib",
+              "glob": "*.jpg",
+              "output": "assets"
+            }],
             "styles": ["apps/blog/src/styles.css"],
             "scripts": []
           },
@@ -322,6 +330,58 @@
         }
       },
       "schematics": {}
+    },
+    "app-helpers": {
+      "root": "libs/app-helpers",
+      "sourceRoot": "libs/app-helpers/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/app-helpers/tsconfig.lib.json",
+              "libs/app-helpers/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/app-helpers/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/app-helpers/jest.config.js",
+            "tsConfig": "libs/app-helpers/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-assets": {
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/assets/tsconfig.lib.json",
+              "libs/shared/assets/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/assets/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/assets/jest.config.js",
+            "tsConfig": "libs/shared/assets/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
