@@ -113,7 +113,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "review:build",
-            "proxyConfig": "apps/review/proxy.conf.json"
+            "proxyConfig": "apps/review/proxy.conf.json",
+            "port": 4201
           },
           "configurations": {
             "production": {
@@ -231,7 +232,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "blog:build",
-            "proxyConfig": "apps/blog/proxy.conf.json"
+            "proxyConfig": "apps/blog/proxy.conf.json",
+            "port": 4200
           },
           "configurations": {
             "production": {
