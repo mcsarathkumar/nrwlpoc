@@ -21,6 +21,23 @@
   "projects": {
     "api": {
       "tags": []
+    },
+    "review": {
+      "tags": []
+    },
+    "review-e2e": {
+      "tags": [],
+      "implicitDependencies": ["review"]
+    },
+    "blog": {
+      "tags": []
+    },
+    "blog-e2e": {
+      "tags": [],
+      "implicitDependencies": ["blog"]
+    },
+    "emailsubscription": {
+      "tags": []
     }
   }
 }
