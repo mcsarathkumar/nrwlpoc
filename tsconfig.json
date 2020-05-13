@@ -18,7 +18,8 @@
     "paths": {
       "@nrwlpoc/emailsubscription": ["libs/emailsubscription/src/index.ts"],
       "@nrwlpoc/app-helpers": ["libs/app-helpers/src/index.ts"],
-      "@nrwlpoc/shared/assets": ["libs/shared/assets/src/index.ts"]
+      "@nrwlpoc/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@nrwlpoc/shared-lazy": ["libs/shared-lazy/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -46,6 +46,9 @@
     },
     "shared-assets": {
       "tags": []
+    },
+    "shared-lazy": {
+      "tags": []
     }
   }
 }

@@ -74,11 +74,15 @@
             "polyfills": "apps/review/src/polyfills.ts",
             "tsConfig": "apps/review/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/review/src/favicon.ico", "apps/review/src/assets", {
-              "input": "libs/shared/assets/src/lib",
-              "glob": "*.jpg",
-              "output": "assets"
-            }],
+            "assets": [
+              "apps/review/src/favicon.ico",
+              "apps/review/src/assets",
+              {
+                "input": "libs/shared/assets/src/lib",
+                "glob": "*.jpg",
+                "output": "assets"
+              }
+            ],
             "styles": ["apps/review/src/styles.css"],
             "scripts": []
           },
@@ -197,11 +201,15 @@
             "polyfills": "apps/blog/src/polyfills.ts",
             "tsConfig": "apps/blog/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets", {
-              "input": "libs/shared/assets/src/lib",
-              "glob": "*.jpg",
-              "output": "assets"
-            }],
+            "assets": [
+              "apps/blog/src/favicon.ico",
+              "apps/blog/src/assets",
+              {
+                "input": "libs/shared/assets/src/lib",
+                "glob": "*.jpg",
+                "output": "assets"
+              }
+            ],
             "styles": ["apps/blog/src/styles.css"],
             "scripts": []
           },
@@ -382,6 +390,33 @@
           }
         }
       }
+    },
+    "shared-lazy": {
+      "projectType": "library",
+      "root": "libs/shared-lazy",
+      "sourceRoot": "libs/shared-lazy/src",
+      "prefix": "nrwlpoc",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared-lazy/tsconfig.lib.json",
+              "libs/shared-lazy/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared-lazy/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/shared-lazy/src/test.ts",
+            "tsConfig": "libs/shared-lazy/tsconfig.spec.json",
+            "karmaConfig": "libs/shared-lazy/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
